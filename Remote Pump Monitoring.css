@@ -1,1 +1,593 @@
+/*  (Top-bar) - Start ****************************************************************/
 
+.mybutt {
+    width: 30px; /* Adjust the width to your preference */
+    height: 30px; /* Adjust the height to your preference */
+    border-radius: 100%;
+    background-color: rgb(78, 77, 77); /* You can change the background color */
+    /* box-shadow: 0 0 10px rgb(202, 202, 202); */ /* Add a subtle glow effect */
+    display: flex; /* Flexbox properties are usually commented out with /* not // */
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* You can change the text color */
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.button-text {
+    color: white;
+    text-align: left; /* Align the text to the left */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .mybutt {
+        width: 22px; /* Adjust the width for smaller screens */
+        height: 22px; /* Adjust the height for smaller screens */
+        font-size: 12px; /* Adjust the font size for smaller screens */
+    }
+    
+    .button-text {
+        font-size: 1px; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .mybutt {
+        width: 22px; /* Adjust the width for medium screens */
+        height: 22px; /* Adjust the height for medium screens */
+        font-size: 14px; /* Adjust the font size for medium screens */
+    }
+    
+    .button-text {
+        font-size: 12px; /* Adjust the font size for medium screens */
+    }
+}
+
+
+
+#time-container-mob {
+  text-align: center;
+  padding: 20px;
+  border-radius: 1px;
+  /* Optional: Add background and shadow styles if needed */
+  /* background-color: #ffffff; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Default styles for larger screens */
+#time, #date, #day {
+  font-size: 14px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  #time, #date, #day {
+    font-size: 12px;
+  }
+
+  #time-container-mob {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  #time, #date, #day {
+    font-size: 10px;
+  }
+
+  #time-container-mob {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  #time, #date, #day {
+    font-size: 8px;
+  }
+
+  #time-container-mob {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #time, #date, #day {
+    font-size: 7px;
+  }
+
+  #time-container-mob {
+    width: 95%;
+  }
+}
+
+
+
+/*  (Top-bar) - End *****************************************************************/
+
+/*  Mannual Screen - Start ****************************************************************/
+.mybutt6, .mybutt7 {
+    width: 45px; /* Default width */
+    height: 45px; /* Default height */
+    border-radius: 100%;
+    background-color: rgb(78, 77, 77); /* You can change the background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* You can change the text color */
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .mybutt6, .mybutt7 {
+        width: 40px; /* Adjusted width for mobile */
+        height: 40px; /* Adjusted height for mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .mybutt6, .mybutt7 {
+        width: 50px; /* Adjusted width for desktop */
+        height: 50px; /* Adjusted height for desktop */
+    }
+}
+
+
+.mybutt8 {
+    width: 35px; /* Adjust the width to your preference */
+    height: 35px; /* Adjust the height to your preference */
+    border-radius: 100%;
+    background-color: rgb(78, 77, 77); /* You can change the background color */
+    /* box-shadow: 0 0 10px rgb(202, 202, 202); */ /* Add a subtle glow effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* You can change the text color */
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.resetbtn{
+    background-color: orange;
+    color: black;
+}
+
+
+/*  Mannual Screen - End *****************************************************************/
+
+/*  Alarm indication - Start ****************************************************************/
+
+@keyframes blink-anim {
+    0% { opacity: 1; }
+    15% { opacity: 0.5; } /* Reduce the opacity change */
+    70% { opacity: 1; }
+}
+
+.blink-amber {
+    animation: blink-anim 1s infinite; /* Change '1s' to adjust the blinking speed */
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px yellow; }
+    50% { box-shadow: 0 0 20px yellow; }
+    100% { box-shadow: 0 0 10px yellow; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+
+/*  Alarm indication - End ******************************************************************/
+
+/* Alarm Label (alarm) - Start *******************************************************************/
+/* Base styles for all labels */
+label {
+    /* Use relative units for font size */
+    font-size: 1.5em; /* This is equivalent to 24px if the base font size is 16px */
+    /* Set text color to white */
+    color: white;
+    /* Set a padding using relative units */
+    padding: 0.625em; /* This is equivalent to 10px if the base font size is 16px */
+}
+
+/* Media queries for responsiveness */
+
+/* Adjust styles for smaller screens, such as tablets and mobile phones */
+@media (max-width: 768px) {
+    label {
+        font-size: 1.25em; /* Smaller font size for smaller screens */
+        padding: 0.5em; /* Smaller padding for smaller screens */
+    }
+}
+
+/* Example of specific label styling if needed */
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10,
+#label11, #label12, #label13, #label14, #label15, #label16, #label17, #label18, #label19,
+#label20, #label21, #label22, #label23, #label24, #label25 {
+    /* If specific styles are needed for individual labels, add them here */
+}
+
+/* Alarm Label (alarm) - End *******************************************************************/
+
+/* stationName (home) - start *******************************************************************/
+#stationName {
+    font-size: 40px;
+  }
+
+  #companyName {
+    font-size: 30px;
+  }
+
+/* stationName (home) - end *******************************************************************/
+
+
+
+/* schedule table - start *******************************************************************/
+
+.table-container {
+    width: 100%; /* Use percentage for responsive width */
+    max-width: 1500px; /* Set a max width for larger screens */
+    border: 3px solid darkgreen;
+    border-radius: 10px; /* Add rounded corners */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; /* Use percentage for responsive width */
+    max-width: 1500px; /* Set a max width for larger screens */
+    height: auto; /* Adjust height to content */
+    background-color: #0d1b33;
+}
+
+th, td {
+    border: 3px solid darkgreen;
+    text-align: center;
+    padding: 8px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+#tableBody {
+    background-color: #0d1b33;
+    color: white;
+}
+
+th {
+    background-color: #036e4e;
+}
+
+tr {
+    color: #ffffff;
+}
+
+.schedule-column {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    font-size: x-large;
+    color: white;
+    background-color: #036e4e;
+    width: 200px;
+}
+
+.weekday {
+    color: white;
+    background-color: #036e4e;
+}
+
+.spHeader, .cpHeader {
+    color: white;
+    background-color: #036e4e;
+}
+
+#timePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0d1b33;
+    padding: 20px;
+    border: 3px solid green;
+    border-radius: 10px; /* Add rounded corners */
+    z-index: 1000;
+    color: white;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#errormessage {
+    color: red;
+}
+
+.time-input input[type="text"]:focus,
+#timePopup input[type="text"]:focus {
+    border-color: #05c4e6; /* Change border color to blue when focused */
+}
+
+/* Styling for text boxes with error */
+.error input[type="text"] {
+    border-color: red; /* Change border color to red for text boxes with error */
+}
+
+.time-input input[type="text"] {
+    height: 40px; /* Adjust the height value as needed */
+    border: 3px solid darkgreen; /* Add a green border */
+    border-radius: 10px; /* Add rounded corners */
+    color: white;
+    background-color: gray;
+    text-align: center;
+}
+
+#timePopup input[type="text"] {
+    height: 40px; /* Adjust the height value as needed */
+    border: 3px solid green; /* Add a green border */
+    border-radius: 10px; /* Add rounded corners */
+    color: black;
+    text-align: center;
+}
+
+#cancel {
+    margin-top: 40px;
+    background-color: orange; /* Set background color to gray */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Add pointer cursor on hover */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Styling for set time button */
+#setTimes {
+    margin-top: 40px;
+    background-color: lightblue; /* Set background color to blue */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Add pointer cursor on hover */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Ensure table is scrollable on small screens */
+    }
+
+    table {
+        width: 100%;
+        height: 812px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .schedule-column {
+        font-size: large;
+        width: auto;
+    }
+}
+
+
+/* Alarm LOG table - End *******************************************************************/
+
+
+
+/* Your provided CSS styles */
+#table25 {
+    width: 100%; /* Use percentage for responsive width */
+    max-width: 700px; /* Set a max width for larger screens */
+    background-color: #0d1b33;
+    color: darkgreen; /* for better visibility */
+}
+
+.table-container25 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: min-content;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #table25 {
+        width: 100%; /* Ensure table width adapts to smaller screens */
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+    
+    .table-container25 {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+}
+
+
+        /* .table-container25 {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            overflow: auto;
+            border: 3px solid green; /* Initial blue border */
+             border-radius: 5px; /* Rounded corners */
+            max-width: 100%;
+            max-height: 500px; /* Adjust as needed */
+         } */
+.tr1 {
+    width: 15px;
+}
+
+.tr2 {
+    width: 100px;
+}
+
+.tr3 {
+    width: 80px;
+}
+
+.tr4 {
+    width: 80px;
+}
+
+.tr5 {
+    width: 30px;
+}
+
+/* Some basic styling */
+.controls25 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: min-content;
+}
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading {
+    display: none;
+    font-style: italic;
+    color: rgb(255, 136, 0);
+    align-items: center;
+    font-size: 35px;
+}
+
+.selected25 {
+    background-color: green;
+}
+
+#limitSelect, #searchButton, #nextPage, #prevPage {
+    background-color: blue;
+    color: white;
+    width: min-content;
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px;
+    padding: 5px 10px; /* Add some padding for better look */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#limitSelect {
+    background-color: white;
+    color: black;
+}
+
+#searchButton, #nextPage, #prevPage {
+    background-color: blue;
+}
+
+#limitSelect, #fromDate, #toDate, #searchInput {
+    background-color: white;
+    color: black;
+    width: auto;
+    height: 30px;
+    border: 3px solid blue; /* Initial blue border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+    padding: 5px; /* Padding inside the input */
+}
+
+#limitSelect:focus, #fromDate:focus, #toDate:focus, #searchInput:focus {
+    border-color: green; /* Green border when input is focused */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .controls25 {
+        flex-direction: column; /* Stack controls vertically on small screens */
+        align-items: center;
+    }
+
+    .controls25 label,
+    .controls25 input,
+    .controls25 button {
+        width: 100%;
+        max-width: 300px; /* Set a max width */
+        margin: 10px 0;
+    }
+
+    .pagination {
+        flex-direction: column;
+    }
+
+    .pagination button {
+        margin: 5px 0;
+    }
+}
+
+/* Alarm LOG table - End *******************************************************************/
+
+/* other css - Start *******************************************************************/
+#ipInput {
+    color: black;
+  }
+  
+  #saveButton {
+    color: black;
+  } 
+  
+  
+  
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .edit-button {
+    float: right;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  
+  .listveiw24 {
+    background-color: #000000;
+    
+  }
+  
+  .text6 {
+  font-size: large;
+  
+  }
+  
+  .text7  {
+  font-size: large;
+  
+  }
+  
+  #dataContainer {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .centerregion1{height: 40px;}
+  .centerregion2{height: 40px;}
+  .scrollhome1{height: 400px;}
+  .homecenter1{height: 200px}
+  .SetingClm1{height: 100px;}
+  .togglebutt{background-color: #000000;}
+  .headerhome1 {background-color: #1d0977;}
+  
+  /* other css - End *******************************************************************/
